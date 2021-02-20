@@ -4,24 +4,22 @@ PYTHON_PATH="/opt/conda/envs/cidia19/bin/python"
 CONDA_ENV_NAME="cidia19"
 
 # LOG AND RESULTS CSV FILE
-BASE_LOG_CSV_PATH = '/data/status.csv'
-LOG_CSV_COLUMNS = ['name', 'study_id', 'to_nifti', 'segmented', 'to_slices_3d', 'to_video', 'predicted', 'percentage', 'axis_detail', 'axis_qty']
 AXIS = 2
 
 # DICOM -> NIFTI
-BASE_DICOM_INPUT_DIR = '/data/dicom-original/exame-pulmao'
-BASE_NII_ORIGINAL_OUTPUT_DIR = '/data/nii-original/exame-pulmao'
+BASE_DICOM_INPUT_DIR = '/data/dicom-original'
+BASE_NII_ORIGINAL_OUTPUT_DIR = '/data/nii-original'
 
 # PHNN SEGMENTATION
 PHNN_EXECUTABLE_PATH = '/opt/p-hnn/segment_lung_phnn.py' 
-BASE_SEGMENTED_OUTPUT_DIR = '/data/nii-segmented/exame-pulmao'
+BASE_SEGMENTED_OUTPUT_DIR = '/data/nii-segmented'
 PHNN_THRESHOLD = 0.75
 PHNN_BATCH_SIZE = 10
 
 # MITK
 # DEFAULT VALUES FOR VIDEO CREATION
 BASE_MITK_VIDEO_OUTPUT_DIR = '/data/videos'
-BASE_MITK_VIEWS_OUTPUT_DIR = '/data/slices2d/exame-pulmao'
+BASE_MITK_VIEWS_OUTPUT_DIR = '/data/slices2d'
 MITK_TRANSFER_FUNCTION_PATH = '/data/tf/tf12_2.xml'
 MITK_VIDEO_EXECUTABLE_PATH = '/opt/video-maker-mitk/build/videomaker' 
 MITK_VIDEO_WIDTH = 512 #px
@@ -44,9 +42,4 @@ PREDICTION_AXIS = 2
 PREDICTION_CLASSES = 2
 PREDICTION_WIDTH = 448
 PREDICTION_HEIGHT = 488
-
-# ACCESS TO API
-API_URL = 'https://cidia.ufrgs.dev/api/v1/exam-classifications'
-API_USERNAME = 'username'
-API_PASSWORD = 'password'
 
